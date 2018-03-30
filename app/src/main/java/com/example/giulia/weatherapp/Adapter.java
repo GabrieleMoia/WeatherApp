@@ -38,6 +38,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>  {
             holder.tv.setText(Singleton.getInstance().getItemList().get(position).getNome());
         }
 
+        holder.position=position;
 
 
     }
@@ -53,6 +54,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>  {
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView tv;
         public ImageView iv;
+        private int position;
         private Context context;
         public ViewHolder(View v) {
             super(v);
@@ -65,6 +67,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>  {
         @Override
         public void onClick(View v) {
             Intent intent=new Intent(context,DetailActivity.class);
+            intent.putExtra("name",Singleton.getInstance().getItemList().get(position).getNome());
             context.startActivity(intent);
         }
     }

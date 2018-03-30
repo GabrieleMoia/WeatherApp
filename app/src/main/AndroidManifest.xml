@@ -23,6 +23,9 @@
             <category android:name="android.intent.category.INFO" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
+ <uses-permission android:name="android.permission.INTERNET">
+
+ </uses-permission>
 </manifest>
