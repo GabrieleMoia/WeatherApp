@@ -45,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>  {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return Singleton.getInstance().getItemList().size();
     }
 
 
