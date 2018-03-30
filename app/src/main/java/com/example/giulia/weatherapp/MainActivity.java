@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        setTitle("Weather");
+        setTitle("weather");
 
         Adapter adapter=new Adapter(getApplicationContext());
         recyclerView.setAdapter(adapter);

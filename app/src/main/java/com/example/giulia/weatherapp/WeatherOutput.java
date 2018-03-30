@@ -9,9 +9,19 @@ public class WeatherOutput {
     int id;
     String name;
     main main;
+    weather[] weather=new weather[Singleton.getInstance().getItemList().size()];
+
+    public weather getWeathers(int position) {
+        return weather[position];
+    }
+
+    public void setWeathers(com.example.giulia.weatherapp.weather[] weathers) {
+        this.weather = weathers;
+    }
 
     public int getId() {
         return id;
+
     }
 
     public void setId(int id) {

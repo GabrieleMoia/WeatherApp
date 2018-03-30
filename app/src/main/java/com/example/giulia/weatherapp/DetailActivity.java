@@ -3,8 +3,6 @@ package com.example.giulia.weatherapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.android.volley.Response;
@@ -36,7 +34,9 @@ public class DetailActivity extends AppCompatActivity{
             @Override
             public void onResponse(WeatherOutput response) {
                 TextView temperature =(TextView)findViewById(R.id.gradi);
+                TextView tempo=(TextView) findViewById(R.id.tempo);
                 temperature.setText(response.getMain().getTemp());
+                tempo.setText(response.getWeathers(0).getMain());
             }
         },new Response.ErrorListener() {
             @Override
