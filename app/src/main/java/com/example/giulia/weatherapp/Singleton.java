@@ -15,7 +15,7 @@ public class Singleton {
 
     //base di appoggio per i nostri dati
     private static Singleton ourInstance = new Singleton();
-    private List contactList = new ArrayList<Città>();
+    private List cityList = new ArrayList<Città>();
 
     public static Singleton getInstance() {
         return ourInstance;
@@ -25,13 +25,11 @@ public class Singleton {
 
     }
 
-    public void setItemList(List<Città> contactList) {
-        this.contactList = contactList;
+    public void setItemList(List<Città> cityList) {
+        this.cityList = cityList;
     }
 
     public List<Città> getItemList() {
-        return this.contactList;
+        return this.cityList;
     }
-
-
 }
