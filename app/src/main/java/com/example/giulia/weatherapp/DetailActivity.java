@@ -1,28 +1,18 @@
 package com.example.giulia.weatherapp;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.drawable.DrawerArrowDrawable;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.location.Location;
-
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by Giulia on 30/03/2018.
@@ -67,20 +57,12 @@ public class DetailActivity extends AppCompatActivity {
                             })
                             .create()
                             .show();
-                    // Show an explanation to the user *asynchronously* -- don't block
-                    // this thread waiting for the user's response! After the user
-                    // sees the explanation, try again to request the permission.
-
                 } else {
 
                     // No explanation needed; request the permission
                     ActivityCompat.requestPermissions(this,
                             new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                             REQUEST_LOCATION);
-
-                    // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                    // app-defined int constant. The callback method gets the
-                    // result of the request.
                 }
             } else {
                 cityName = DataAccessSource.getCurrentCityName(getApplicationContext());
@@ -149,5 +131,3 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 }
-
-    /**/
